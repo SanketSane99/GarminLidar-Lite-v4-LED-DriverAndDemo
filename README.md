@@ -18,6 +18,9 @@ The demo was a vehicle controlled by the BluefruitConnect app. The following par
 
 ![image](https://user-images.githubusercontent.com/85893093/146115269-7c2b65e0-5431-4308-ac4a-347952bf99ad.png)
 
+To assemble the chassis, see the following link.
+https://learn.sparkfun.com/tutorials/assembly-guide-for-redbot-with-shadow-chassis/introduction
+Extra features such as accelerometers, encoders, and bumpers were not used.
 
 The following image shows the pin layout of the Lidar. Note that most of the pins are circular, except the first, which is rectangular and is the 5V input power source.
 
