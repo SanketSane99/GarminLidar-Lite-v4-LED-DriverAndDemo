@@ -15,7 +15,7 @@ The following image shows the pin layout of the Lidar. Note that most of the pin
 ![image](https://user-images.githubusercontent.com/85893093/145903079-3c0971f5-d54d-42a2-804c-5f9ab2103091.png)
 
 The next image shows the connections that should be made with the sensor.
-![image](https://user-images.githubusercontent.com/85893093/145903112-b44d744b-04aa-4955-b27e-c6257c6156b1.png)
+![image](https://user-images.githubusercontent.com/85893093/146111138-a7fa52d2-737d-4dfc-9e08-10cb54852b0d.png)
 
 
 For this demo, the Bluefruit module is used. For pin connection and more info on the bluefruit module, see the following link:
