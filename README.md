@@ -9,6 +9,18 @@ Garmin LIDAR-Lite v4 LED
 The Garmin LIDAR-Lite v4 LED is a lidar sensor that is primarily interfaced with using the I2C or ANT interfaced. It is also configurable for SPI with user applications.
 This library and Demo use I2C.
 
+The following parts are required for the demo vehicle.
+Part used: 
+LidarLitev4LED
+2 DG01D DC motors
+Mbed microcontroller
+Shadow Robot Chassis
+TB6612FNG Dual H-bridge Motor Driver
+Adafruit Bluetooth LE UART Friend 
+8x AA Batteries with two battery packs and two barrel jack adapters
+
+![image](https://user-images.githubusercontent.com/85893093/146114201-07e59462-b416-41a0-b85d-89c4fd1b0ddb.png)
+
 
 The following image shows the pin layout of the Lidar. Note that most of the pins are circular, except the first, which is rectangular and is the 5V input power source.
 
