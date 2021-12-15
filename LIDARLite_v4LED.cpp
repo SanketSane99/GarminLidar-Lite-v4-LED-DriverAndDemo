@@ -2,11 +2,11 @@
 #include "LIDARLite_v4LED.h"
 
 
-Serial pc2(USBTX, USBRX);
+
 
 bool LIDARLite_v4LED::begin(uint8_t address, I2C &i2c)
 {
-    _deviceAddress = address; //grab the address that the sensor is on
+    _deviceAddress = address << 1; //grab the address that the sensor is on
       //grab which port the user wants to use
     _i2c = &i2c;
     //return true if the device is connected
@@ -16,7 +16,7 @@ bool LIDARLite_v4LED::begin(uint8_t address, I2C &i2c)
 bool LIDARLite_v4LED::isConnected()
 {
     char empty [1];
-    _i2c -> start();
+    _i2c->start();
     int ack = _i2c->write(_deviceAddress);
     if (ack == 1)
         return true;
@@ -134,7 +134,7 @@ bool LIDARLite_v4LED::setI2Caddr(uint8_t newAddress, bool disableDefaultI2CAddre
     wait(.1);
 
     //Change _deviceAddress to reflect the changed address
-    _deviceAddress = newAddress;
+    _deviceAddress = newAddress << 1;
 
     // If desired, disable default I2C device address (using the new I2C device address)
     if (disableDefaultI2CAddress)
@@ -144,7 +144,7 @@ bool LIDARLite_v4LED::setI2Caddr(uint8_t newAddress, bool disableDefaultI2CAddre
         // Wait for the I2C peripheral to be restarted with new device address
         wait(.1);
     }
-
+   
     // Disable flash storage
     enableFlash(false);
     wait(.1);
@@ -163,6 +163,7 @@ bool LIDARLite_v4LED::useDefaultAddress()
     }
 
     _deviceAddress = LIDARLITE_ADDR_DEFAULT;
+    _deviceAddress = _deviceAddress << 1;
 
     //Wait for LIDAR to acknowledge on the new address
     uint8_t counter = 0;
@@ -228,8 +229,8 @@ void LIDARLite_v4LED::enableFlash(bool enable)
 void LIDARLite_v4LED::takeRange()
 {
     uint8_t dataByte = 0x04;
-
     write(ACQ_COMMANDS, &dataByte, 1);
+  
 } /* LIDARLite_v4LED::takeRange */
 
 
@@ -283,7 +284,7 @@ uint16_t LIDARLite_v4LED::readDistance()
 
     // Read two bytes from registers 0x10 and 0x11
     read(FULL_DELAY_LOW, dataBytes, 2);
-    //pc2.printf("%d\n\r", distance);
+    
 
     return (distance); //This is the distance in centimeters
 } /* LIDARLite_v4LED::readDistance */
@@ -294,6 +295,7 @@ uint16_t LIDARLite_v4LED::getDistance()
 {
     // 1. Trigger a range measurement.
     takeRange();
+    
 
     // 2. Wait for busyFlag to indicate the device is idle.
     waitForBusy();
@@ -313,9 +315,8 @@ uint16_t LIDARLite_v4LED::getDistance()
   Parameters
   ------------------------------------------------------------------------------
   triggerPin: digital output pin connected to trigger input of LIDAR-Lite
-  monitorPin: digital input pin connected to monitor output of LIDAR-Lite
 ------------------------------------------------------------------------------*/
-void LIDARLite_v4LED::takeRangeGpio(DigitalOut triggerPin, DigitalIn monitorPin)
+void LIDARLite_v4LED::takeRangeGpio(DigitalOut triggerPin)
 {
     uint8_t busyFlag;
 
@@ -324,12 +325,7 @@ void LIDARLite_v4LED::takeRangeGpio(DigitalOut triggerPin, DigitalIn monitorPin)
     else
         triggerPin.write(1);
 
-    // When LLv4 receives trigger command it will drive monitor pin low.
-    // Wait for LLv4 to acknowledge receipt of command before moving on.
-    do
-    {
-        busyFlag = getBusyFlagGpio(monitorPin);
-    } while (!busyFlag);
+    
 } /* LIDARLite_v4LED::takeRangeGpio */
 
 
@@ -494,23 +490,17 @@ bool LIDARLite_v4LED::factoryReset()
 bool LIDARLite_v4LED::write(uint8_t regAddr, uint8_t *dataBytes,
                             uint8_t numBytes)
 {
-    int nackCatcher;
+    
     char cmd [numBytes+1];
     cmd[0] = regAddr;
     for(int i = 0; i<numBytes; i++){
         cmd[i+1] = dataBytes[i];    
     }
+    
     // First byte of every write sets the LidarLite's internal register address pointer
-    _i2c->write((int)_deviceAddress,cmd,(int)numBytes+1);
+    return !(_i2c->write((int)_deviceAddress,cmd,(int)numBytes+1));
 
     
-    if (nackCatcher != 0)
-    {
-        // handle nack issues in here
-        return false;
-    }
-    else
-        return true;
 } /* LIDARLite_v4LED::write */
 
 
@@ -536,6 +526,7 @@ void LIDARLite_v4LED::read(uint8_t regAddr, uint8_t *dataBytes,
 {
     int nackCatcher = 0;
 
+    
     _i2c->write((int)_deviceAddress, (char *)&regAddr, 1); // Set the register to be read
 
   
