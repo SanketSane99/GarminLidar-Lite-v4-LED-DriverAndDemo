@@ -31,3 +31,4 @@ https://os.mbed.com/users/4180_1/notebook/adafruit-bluefruit-le-uart-friend---bl
 ![20211214_140043](https://user-images.githubusercontent.com/96154246/146110832-fac30f29-b3b2-4923-818b-799e658c0059.jpg)
 ![20211214_140051](https://user-images.githubusercontent.com/96154246/146110845-8cee6e5d-3926-4794-9781-892a70a266c0.jpg)
 ![20211214_140102](https://user-images.githubusercontent.com/96154246/146110857-9edaa65c-3c5e-4c54-9b3a-7b175a00f593.jpg)
+https://youtu.be/OlzsVd41I5I 
