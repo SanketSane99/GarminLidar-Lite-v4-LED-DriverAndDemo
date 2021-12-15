@@ -33,7 +33,7 @@ The table below shows the connections to the motors and dual h-bridge driver.
 
 
 For this demo, the Bluefruit module is used. The following pin connections were used.
-![image](https://user-images.githubusercontent.com/85893093/146111282-6f196e60-5779-4743-865a-af83b05e7789.png)
+![image](https://user-images.githubusercontent.com/85893093/146205948-99eaecaa-b881-4348-b474-235a12075e16.png)
 
 
 For more info on the bluefruit module, see the following link:
