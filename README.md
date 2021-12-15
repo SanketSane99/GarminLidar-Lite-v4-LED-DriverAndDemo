@@ -11,7 +11,8 @@ This library and Demo use I2C.
 
 The following parts are required for the demo vehicle.Note that two battery packs were used (4x AA each) because one was not enough to power the Mbed, Bluefruit Module, Lidar, and Motors.
 1 Battery back was used for the motors, the Bluefruit module, and the lidar, while the 2nd battery pack was used for the Mbed.
-![image](https://user-images.githubusercontent.com/85893093/146114970-a4750ad0-8c3c-4c51-b1ed-76283d3c68da.png)
+
+![image](https://user-images.githubusercontent.com/85893093/146115269-7c2b65e0-5431-4308-ac4a-347952bf99ad.png)
 
 
 The following image shows the pin layout of the Lidar. Note that most of the pins are circular, except the first, which is rectangular and is the 5V input power source.
@@ -23,7 +24,7 @@ The next image shows the connections that should be made with the sensor.
 
 The next image shows the connections to the motor driver and dual h-bridge drive.
 
-![image](https://user-images.githubusercontent.com/85893093/146113872-443525aa-5b49-4a48-b76f-2d51ec358e9f.png)
+![image](https://user-images.githubusercontent.com/85893093/146114970-a4750ad0-8c3c-4c51-b1ed-76283d3c68da.png)
 
 
 
@@ -40,4 +41,4 @@ https://os.mbed.com/users/4180_1/notebook/adafruit-bluefruit-le-uart-friend---bl
 ![20211214_140051](https://user-images.githubusercontent.com/96154246/146110845-8cee6e5d-3926-4794-9781-892a70a266c0.jpg)
 ![20211214_140102](https://user-images.githubusercontent.com/96154246/146110857-9edaa65c-3c5e-4c54-9b3a-7b175a00f593.jpg)
 
-Video showcase: https://www.youtube.com/watch?v=OlzsVd41I5I
+Video demo: https://www.youtube.com/watch?v=OlzsVd41I5I
