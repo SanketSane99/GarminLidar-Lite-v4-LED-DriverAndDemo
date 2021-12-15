@@ -18,7 +18,14 @@ The next image shows the connections that should be made with the sensor.
 ![image](https://user-images.githubusercontent.com/85893093/146111138-a7fa52d2-737d-4dfc-9e08-10cb54852b0d.png)
 
 
-For this demo, the Bluefruit module is used. For pin connection and more info on the bluefruit module, see the following link:
+
+
+
+For this demo, the Bluefruit module is used. The following pin connections were used.
+![image](https://user-images.githubusercontent.com/85893093/146111282-6f196e60-5779-4743-865a-af83b05e7789.png)
+
+
+For more info on the bluefruit module, see the following link:
 https://os.mbed.com/users/4180_1/notebook/adafruit-bluefruit-le-uart-friend---bluetooth-low-/.
 
 ![20211214_140043](https://user-images.githubusercontent.com/96154246/146110832-fac30f29-b3b2-4923-818b-799e658c0059.jpg)
