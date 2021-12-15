@@ -68,7 +68,7 @@ class LIDARLite_v4LED
         uint16_t getDistance(); //Asks for, waits, and returns new measurement reading in centimeters
 
         //Gpio functions
-        void takeRangeGpio(DigitalOut triggerPin, DigitalIn monitorPin); //Initiate a distance measurement by toggling the trigger pin
+        void takeRangeGpio(DigitalOut triggerPin); //Initiate a distance measurement by toggling the trigger pin
         void waitForBusyGpio(DigitalIn monitorPin);                   //Blocking function to wait until the LIDAR Lite's internal busy flag goes low
         uint8_t getBusyFlagGpio(DigitalIn monitorPin);                //Check BUSY status via Monitor pin. Function will return 0x00 if not busy
 
