@@ -23,7 +23,7 @@ The following image shows the pin layout of the Lidar. Note that most of the pin
 ![image](https://user-images.githubusercontent.com/85893093/145903079-3c0971f5-d54d-42a2-804c-5f9ab2103091.png)
 
 The next image shows the connections that should be made with the sensor.
-![image](https://user-images.githubusercontent.com/85893093/146111138-a7fa52d2-737d-4dfc-9e08-10cb54852b0d.png)
+![image](https://user-images.githubusercontent.com/85893093/146205312-66910334-0fef-4475-8bbd-8ee71c9b55e5.png)
 
 The next image shows the connections to the motor driver and dual h-bridge drive.
 
