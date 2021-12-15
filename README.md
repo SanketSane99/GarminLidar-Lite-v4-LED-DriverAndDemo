@@ -6,7 +6,7 @@ Adapted preexisting Arduino library to interface with the LidarLite_v4LED sensor
 Garmin LIDAR-Lite v4 LED
 
 
-The Garmin LIDAR-Lite v4 LED is a lidar sensor that is primarily interfaced with using the I2C or ANT interfaced. It is also configurable for SPI with user applications.
+The Garmin LIDAR-Lite v4 LED is a lidar sensor that is primarily interfaced with using the I2C or ANT interface. It is also configurable for SPI with user applications.
 This library and Demo use I2C.
 
 The following parts are required for the demo vehicle.Note that two battery packs were used (4x AA each) because one was not enough to power the Mbed, Bluefruit Module, Lidar, and Motors.
