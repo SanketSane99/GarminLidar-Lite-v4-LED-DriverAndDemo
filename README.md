@@ -2,7 +2,7 @@
 Adapted preexisting Arduino library to interface with the LidarLite_v4LED sensor using Mbed.
 
 
-**Disclamer: Many of the library functions have been tested, but if there is error, please comment.
+**Disclamer: Many of the library functions have been tested, but if there is an error, please comment.
 
 
 ![image](https://user-images.githubusercontent.com/85893093/145903958-eeffc936-7194-41f8-ade3-3e680ac312af.png)
