@@ -11,7 +11,7 @@ This library and Demo use I2C.
 
 The following parts are required for the demo vehicle.Note that two battery packs were used (4x AA each) because one was not enough to power the Mbed, Bluefruit Module, Lidar, and Motors.
 1 Battery back was used for the motors, the Bluefruit module, and the lidar, while the 2nd battery pack was used for the Mbed.
-![image](https://user-images.githubusercontent.com/85893093/146114645-db952ff7-c705-491c-9ff0-21b4e6f51bd2.png)
+![image](https://user-images.githubusercontent.com/85893093/146114970-a4750ad0-8c3c-4c51-b1ed-76283d3c68da.png)
 
 
 The following image shows the pin layout of the Lidar. Note that most of the pins are circular, except the first, which is rectangular and is the 5V input power source.
