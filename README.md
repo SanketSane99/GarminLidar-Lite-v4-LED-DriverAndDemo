@@ -1,6 +1,7 @@
 # GarminLidarLitev4LED Driver And Demo
 Adapted preexisting Arduino library to interface with the LidarLite_v4LED sensor using Mbed.
 
+Link to Arduino Library: https://github.com/garmin/LIDARLite_Arduino_Library
 
 **Note: Many of the library functions have been tested, but if there is an error, please comment.
 
